@@ -45,16 +45,16 @@ let NavBar = () => {
               </li>
 
               <li className="sidebar-item">
-                <a
+                <Link
                   className="sidebar-link"
-                  href="./ui-alerts.html"
+                  to="/forms"
                   aria-expanded="false"
                 >
                   <span>
                     <i className="ti ti-alert-circle"></i>
                   </span>
-                  <span className="hide-menu">Alerts</span>
-                </a>
+                  <span className="hide-menu">Forms</span>
+                </Link>
               </li>
 
               <li className="sidebar-item">

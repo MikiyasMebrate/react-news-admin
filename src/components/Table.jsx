@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import formattedDate from "../utility/formattedDate";
+import Button from "./Button";
+import AddNewNewsModal from "./ui/AddNewNewsModal";
+
 
 let Table = ({data}) => {
     let tableRow = data.news.map((news, index) => (
@@ -19,7 +22,9 @@ let Table = ({data}) => {
     ))
   return (
     <>
+       
       <div className="table-responsive">
+        <AddNewNewsModal title={"add blog"} />
         <table className="table table-hover table-bordered caption-top ">
           <caption>List of Blogs</caption>
           <thead>
@@ -37,6 +42,8 @@ let Table = ({data}) => {
           </tbody>
         </table>
       </div>
+
+    
     </>
   );
 };

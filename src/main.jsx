@@ -13,6 +13,7 @@ import Header from './components/ui/Header.jsx'
 import NavBar from './components/ui/NavBar.jsx'
 import Blog from './pages/Blog.jsx'
 import BlogDetail from './pages/BlogDetail.jsx'
+import PageForms from './components/PageForms.jsx'
 
 let router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ let router = createBrowserRouter([
         path : '/blog/:blogId',
         element : <BlogDetail />
       },
+      {
+        path : '/forms',
+        element : <PageForms />
+      }
     ]
   }
 ])

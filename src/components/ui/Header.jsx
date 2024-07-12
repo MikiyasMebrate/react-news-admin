@@ -28,13 +28,6 @@ let Header = () => {
               id="navbarNav"
             >
               <ul className="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-                <a
-                  href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/"
-                  target="_blank"
-                  className="btn btn-primary"
-                >
-                  Download Free
-                </a>
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link nav-icon-hover"
