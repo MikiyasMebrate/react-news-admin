@@ -2,9 +2,22 @@ import { Link } from "react-router-dom";
 import formattedDate from "../utility/formattedDate";
 import Button from "./Button";
 import AddNewNewsModal from "./ui/AddNewNewsModal";
+import axios from "axios";
+import { useEffect } from "react";
 
 
 let Table = ({data}) => {
+  
+  
+  let handleOnDelete = async (id)=>{
+    let url = `http://127.0.0.1:8000/delete-news/${id}`
+
+    axios.delete(url)
+    .then(res => {
+      console.log(res)
+    }).catch(err => console.log(err))
+  }
+
     let tableRow = data.news.map((news, index) => (
         <tr key={news.id}>
              <th scope="row">{index + 1}</th>
@@ -13,8 +26,8 @@ let Table = ({data}) => {
               <td style={{width : '10%'}}> <img className="img-fluid m-0 p-0" style={{width:'40%'}} src={`http://127.0.0.1:8000/media/${news.image}`} alt="" /></td>
               <td>{formattedDate(news.created)}</td>
               <td > 
-                <button className="btn btn-sm btn-primary">Edit</button>
-                <button className="btn btn-sm btn-danger ms-2">Delete</button>
+                <button  className="btn btn-sm btn-primary">Edit</button>
+                <button onClick={()=>handleOnDelete(news.id)} className="btn btn-sm btn-danger ms-2">Delete</button>
                 <Link to={`/blog/${news.id}`} className="btn btn-sm btn-success ms-2">View</Link>
              </td>
               

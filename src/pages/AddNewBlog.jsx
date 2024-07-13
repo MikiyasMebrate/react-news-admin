@@ -40,9 +40,7 @@ let AddNewBlog = () => {
         
         console.log("response",response.data)
         if(response.data){
-            console.log("congra")
             navigate('/blog');
-            
         }
     }
     catch{
