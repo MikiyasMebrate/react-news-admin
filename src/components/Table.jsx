@@ -24,7 +24,6 @@ let Table = ({data}) => {
     <>
        
       <div className="table-responsive">
-        <AddNewNewsModal title={"add blog"} />
         <table className="table table-hover table-bordered caption-top ">
           <caption>List of Blogs</caption>
           <thead>

@@ -14,6 +14,7 @@ import NavBar from './components/ui/NavBar.jsx'
 import Blog from './pages/Blog.jsx'
 import BlogDetail from './pages/BlogDetail.jsx'
 import PageForms from './components/PageForms.jsx'
+import AddNewBlog from './pages/AddNewBlog.jsx'
 
 let router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ let router = createBrowserRouter([
       {
         path : '/forms',
         element : <PageForms />
+      },
+      {
+        path : '/add-new-blog',
+        element : <AddNewBlog />
       }
     ]
   }
